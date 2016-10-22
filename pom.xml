@@ -15,6 +15,7 @@
         <!-- Dependencies -->
         <junit-jupiter-engine.version>5.0.0-M2</junit-jupiter-engine.version>
         <junit.platform.version>1.0.0-M2</junit.platform.version>
+        <junit.vintage.version>4.12.0-M2</junit.vintage.version>
         <mockito-core.version>2.1.0</mockito-core.version>
 
         <!-- Plugins -->
@@ -34,6 +35,12 @@
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
             <version>${junit-jupiter-engine.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.vintage</groupId>
+            <artifactId>junit-vintage-engine</artifactId>
+            <version>${junit.vintage.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
