@@ -9,6 +9,9 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
+        <!-- General -->
+        <java.version>1.8</java.version>
+
         <!-- Dependencies -->
         <junit-jupiter-engine.version>5.0.0-M2</junit-jupiter-engine.version>
         <junit.platform.version>1.0.0-M2</junit.platform.version>
@@ -41,6 +44,10 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${maven-compiler-plugin.version}</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
