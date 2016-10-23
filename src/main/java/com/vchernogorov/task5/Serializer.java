@@ -10,7 +10,7 @@ public class Serializer {
         this.file = file;
     }
 
-    public void serialize(Object object) {
+    public void serialize(Object object) throws SerializerException {
         try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(file))) {
             out.writeObject(object);
         } catch (IOException e) {
@@ -18,7 +18,7 @@ public class Serializer {
         }
     }
 
-    public <T extends Serializable> T deserialize(Class<T> objectType) {
+    public <T extends Serializable> T deserialize(Class<T> objectType) throws SerializerException {
         try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(file))) {
             return objectType.cast(in.readObject());
         } catch (IOException | ClassNotFoundException | ClassCastException e) {

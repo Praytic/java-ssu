@@ -16,7 +16,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class Task5Test {
 
     @Test
-    public void dishSerialization() throws IOException {
+    public void dishSerialization() throws IOException, SerializerException {
         File file = createTempFile();
         Serializer serializer = new Serializer(file);
         Dish expected = new Dish("name", 0, 0);
@@ -28,7 +28,7 @@ public class Task5Test {
     }
 
     @Test
-    public void menuSerialization() throws IOException {
+    public void menuSerialization() throws IOException, SerializerException {
         File file = createTempFile();
         Serializer serializer = new Serializer(file);
         Menu expected = new Menu(Collections.singletonList(new Dish("name", 0, 0)));
@@ -40,7 +40,7 @@ public class Task5Test {
     }
 
     @Test
-    public void orderSerialization() throws IOException {
+    public void orderSerialization() throws IOException, SerializerException {
         File file = createTempFile();
         Serializer serializer = new Serializer(file);
         Order expected = new Order("customer", Collections.singletonList(new Dish("name", 0, 0)));
@@ -52,7 +52,7 @@ public class Task5Test {
     }
 
     @Test
-    public void serializerException() throws IOException {
+    public void serializerException() throws IOException, SerializerException {
         File file = createTempFile();
         Serializer serializer = new Serializer(file);
         Dish expected = new Dish("name", 0, 0);
