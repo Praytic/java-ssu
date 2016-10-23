@@ -1,6 +1,8 @@
 package com.vchernogorov.task2;
 
-public class Dish {
+import java.io.Serializable;
+
+public class Dish implements Serializable {
 
     private String name;
     private int weight;
