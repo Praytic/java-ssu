@@ -1,9 +1,10 @@
 package com.vchernogorov.task2;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
 
-public class Menu {
+public class Menu implements Serializable {
 
     private List<Dish> dishes;
 

@@ -1,8 +1,9 @@
 package com.vchernogorov.task2;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Order {
+public class Order implements Serializable {
 
     private String customerName;
     private List<Dish> dishes;
